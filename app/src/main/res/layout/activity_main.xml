@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Relative layout as parent layout -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- text view to show the selected item-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/selectCompany"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:drawableEnd="@drawable/ic_arrow"
+        android:hint="Select Company">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:hint="Coupon Code"
+     android:layout_marginTop="16dp"
+     android:layout_marginStart="16dp"
+     android:layout_marginEnd="16dp">
+     <com.google.android.material.textfield.TextInputEditText
+         android:id="@+id/selectCoupon"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:inputType="text" />
+ </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Coupon Description"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/selectDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:maxLength="200"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/testView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical|start"
+        android:hint="\n\nThe coupons submitted will be verified by the \nsystem and points will be assigned based on the \ndiscount availed by your coupon."
+        android:maxLines="3"
+        app:drawableLeftCompat="@drawable/ic_baseline_info_24">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VERIFY AND SUBMIT"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+    </com.google.android.material.button.MaterialButton>
+
+
+</LinearLayout>
